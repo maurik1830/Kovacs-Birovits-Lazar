@@ -135,5 +135,6 @@ class Program
             jatekosY += dy;
             palya[jatekosX, jatekosY] = 'P';
         }
+        
     }
 }
