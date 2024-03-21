@@ -23,6 +23,10 @@ class Program
 
     static void Inicializalas()
     {
+
+
+
+
         palya = new char[palyaMeret, palyaMeret];
         jatekosX = palyaMeret / 2;
         jatekosY = palyaMeret / 2;
@@ -134,7 +138,10 @@ class Program
             jatekosX += dx;
             jatekosY += dy;
             palya[jatekosX, jatekosY] = 'P';
+        }else if (palya[jatekosX-1, jatekosY] == 'A')
+        {
+            
         }
-        
+
     }
 }
