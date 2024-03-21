@@ -8,22 +8,24 @@ namespace LaBiKo
 {
     internal class Palya1
     {
-        private int szoba1mag;
-        private int szoba1szel;
 
-        private int szoba2mag;
-        private int szoba2szel;
+        private int Szoba1Mag;
+        private int Szoba1Szel;
 
-        private int szoba3mag;
-        private int szoba3szel;
 
-        private int szoba4mag;
-        private int szoba4szel;
+        private int Szoba2Mag;
+        private int Szoba2Szel;
+
+        private int Szoba3Mag;
+        private int Szoba3Szel;
+
+        private int Szoba4Mag;
+        private int Szoba4Szel;
 
 
         public int Szoba1Ter
         {
-            get { return szoba1mag * szoba1szel; }
+            get { return Szoba1Mag* Szoba1Szel; }
             init { }
 
         }
@@ -32,7 +34,7 @@ namespace LaBiKo
 
         public int Szoba2Ter
         {
-            get { return szoba2mag * szoba2szel; }
+            get { return Szoba2Mag* Szoba2Szel; }
             init { }
 
         }
@@ -40,7 +42,7 @@ namespace LaBiKo
 
         public int Szoba3Ter
         {
-            get { return szoba3mag * szoba3szel; }
+            get { return Szoba3Mag * Szoba3Szel; }
             init { }
 
         }
@@ -49,7 +51,7 @@ namespace LaBiKo
 
         public int Szoba4Ter
         {
-            get { return szoba4mag * szoba4szel; }
+            get { return Szoba4Mag * Szoba4Szel; }
             init { }
 
         }
@@ -57,23 +59,88 @@ namespace LaBiKo
         public Palya1(int[] szoba1, int[] szoba2, int[] szoba3, int[] szoba4)
         {
 
-            szoba1mag = szoba1[0];
-            szoba1szel = szoba1[1];
+            Szoba1Mag= szoba1[0];
+            Szoba1Szel = szoba1[1];
 
 
-            szoba2mag = szoba2[0];
-            szoba2szel = szoba2[1];
+            Szoba2Mag = szoba2[0];
+            Szoba2Szel = szoba2[1];
 
 
-            szoba3mag = szoba3[0];
-            szoba3szel = szoba3[1];
+            Szoba3Mag = szoba3[0];
+            Szoba3Szel = szoba3[1];
 
 
 
-            szoba4mag = szoba4[0];
-            szoba4szel = szoba4[1];
+            Szoba4Mag = szoba4[0];
+            Szoba4Szel = szoba4[1];
 
 
+        }
+
+        public void Szoba1WR()
+        {
+
+
+
+
+            char[,] szoba_1 = new char[Szoba1Mag, Szoba1Szel];
+            int jatekosX = Szoba1Mag / 2;
+            int jatekosY = Szoba1Szel / 2;
+
+            // Pálya feltöltése falakkal és üres területekkel // Lázár feladat
+            for (int i = 0; i < Szoba1Mag; i++)
+            {
+                for (int j = 0; j < Szoba1Szel; j++)
+                {
+                    // Falak a pálya szélén
+                    if (i == 0 || j == 0 || i == Szoba1Mag- 1 || j == Szoba1Szel- 1)
+                    {
+                        szoba_1[i, j] = 'X';
+                    }
+                    else if (j == 10)
+                    {
+                        szoba_1[i, j] = 'A';
+                    }
+
+                    else
+                    {
+                        szoba_1[i, j] = '.';
+                    }
+                }
+            }
+
+            // Játékos elhelyezése a pálya közepén
+            szoba_1[jatekosX, jatekosY] = 'P';
+
+            // Tárgyak és élőlények elhelyezése
+            Random rand = new Random();
+            int targyakSzama = 8;
+            int elolenyekSzama = 5;
+
+            for (int i = 0; i < targyakSzama; i++)
+            {
+                int x, y;
+                do
+                {
+                    x = rand.Next(1, Szoba1Mag - 1);
+                    y = rand.Next(1, Szoba1Szel - 1);
+                } while (szoba_1[x, y] != '.');
+
+                szoba_1[x, y] = 'T';
+            }
+
+            for (int i = 0; i < elolenyekSzama; i++)
+            {
+                int x, y;
+                do
+                {
+                    x = rand.Next(1, Szoba1Mag - 1);
+                    y = rand.Next(1, Szoba1Szel - 1);
+                } while (szoba_1[x, y] != '.');
+
+                szoba_1[x, y] = 'E';
+            }
         }
 
 
