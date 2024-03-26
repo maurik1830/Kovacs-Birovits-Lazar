@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\birov\\.nuget\\packages\\": {}
+    "C:\\Users\\Móric2\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\!SULI\\!11\\IKT\\Kovacs-Birovits-Lazar-main\\Kovacs-Birovits-Lazar-main\\Labiko\\LaBiKo\\LaBiKo.csproj",
+      "projectUniqueName": "C:\\Users\\Móric2\\OneDrive\\Dokumentumok\\neumann_11b\\ikt\\escapefromatheclub\\Kovacs-Birovits-Lazar\\Labiko\\LaBiKo\\LaBiKo.csproj",
       "projectName": "LaBiKo",
-      "projectPath": "E:\\!SULI\\!11\\IKT\\Kovacs-Birovits-Lazar-main\\Kovacs-Birovits-Lazar-main\\Labiko\\LaBiKo\\LaBiKo.csproj",
-      "packagesPath": "C:\\Users\\birov\\.nuget\\packages\\",
-      "outputPath": "E:\\!SULI\\!11\\IKT\\Kovacs-Birovits-Lazar-main\\Kovacs-Birovits-Lazar-main\\Labiko\\LaBiKo\\obj\\",
+      "projectPath": "C:\\Users\\Móric2\\OneDrive\\Dokumentumok\\neumann_11b\\ikt\\escapefromatheclub\\Kovacs-Birovits-Lazar\\Labiko\\LaBiKo\\LaBiKo.csproj",
+      "packagesPath": "C:\\Users\\Móric2\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Móric2\\OneDrive\\Dokumentumok\\neumann_11b\\ikt\\escapefromatheclub\\Kovacs-Birovits-Lazar\\Labiko\\LaBiKo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\birov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Móric2\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
