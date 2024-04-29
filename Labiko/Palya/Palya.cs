@@ -109,12 +109,12 @@ namespace Palya
 
 
 
-        public void Inicializalas(int id, int i, int j, char[,] palya, int jatekosX, int jatekosY)
+        public void Inicializalas(int id, int i, int j, char[,] palya)
         {
 
             switch (id)
             {
-                case int x when x == 1 && palya[jatekosX, jatekosY+1] == 'A':
+                case int x when x == 1 && palya[i, j+1] == 'A':
 
 
                     id = 2;
@@ -125,6 +125,38 @@ namespace Palya
 
                     AlapInic(out palya, jatekosX, jatekosY);
                     id = 1;
+
+                    break;
+
+
+                case int x when x == 2 && palya[i, j + 1] == 'A':
+
+                    
+                    id = 3;
+
+                    break;
+
+
+                case int x when x == 3 && palya[i-1, j] == 'A':
+
+                    
+                    id = 4;
+
+                    break;
+
+
+                case int x when x == 3 && palya[i, j - 1] == 'A':
+
+
+                    id = 2;
+
+                    break;
+
+
+                case int x when x == 4 && palya[i, j + 1] == 'A':
+
+
+                    id = 4;
 
                     break;
 
