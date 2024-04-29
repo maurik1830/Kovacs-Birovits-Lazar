@@ -3,6 +3,7 @@
 
 using System;
 
+
 class Program
 {
     static char[,] palya;
@@ -11,12 +12,14 @@ class Program
 
     static void Main()
     {
-        Inicializalas();    // Birovits feladat
+        Inicializalas();    // Birovits feladat // AlapInic() Nagy-Erdei Móric
         KirajzolPalya();    // Birovits feladat
 
         while (true)
         {
             Kezeles(Console.ReadKey(true).Key);
+            // Többi szoba Inic // Nagy-Erdei Móric
+
             KirajzolPalya();    // Birovits feladat
         }
     }
